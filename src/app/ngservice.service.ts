@@ -15,7 +15,19 @@ export class NgserviceService {
     return this._http.get<any>(this.urlList);
   }
 
+  fetchFoodByIdFromServer(id: number): Observable<any> {
+    return this._http.get<any>(this.urlList + '/' + id);
+  }
+
   addFoodToServer(food: Food): Observable<any> {
     return this._http.post<any>(this.urlList, food);
+  }
+
+  updateFoodByIdFromServer(id: number, food: Food): Observable<any> {
+    return this._http.put<any>(this.urlList + '/' + id, food);
+  }
+
+  deleteFoodByIdFromServer(id: number): Observable<any> {
+    return this._http.delete<any>(this.urlList + '/' + id);
   }
 }

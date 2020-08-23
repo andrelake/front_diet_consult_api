@@ -23,14 +23,27 @@
         <td id="fontList">{{ food.carbo }}</td>
         <td id="fontList">{{ food.fibra }}</td>
         <td>
-          <button type="button" class="btn btn-success">Editar</button>&nbsp;
-          <button type="button" class="btn btn-warning">Info</button>&nbsp;
-          <button type="button" class="btn btn-danger">Deletar</button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="goToUpdateFood(food.id)"
+          >
+            Editar</button
+          >&nbsp;
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteFoodById(food.id)"
+          >
+            Deletar
+          </button>
         </td>
       </tr>
     </tbody>
   </table>
-  <button type="button" class="btn btn-primary" (click)="goToAddFood()">
-    Adicionar alimento
-  </button>
+  <footer class="footer">
+    <button type="button" class="btn btn-success" (click)="goToAddFood()">
+      Adicionar alimento
+    </button>
+  </footer>
 </div>
