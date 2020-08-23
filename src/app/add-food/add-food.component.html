@@ -1,0 +1,84 @@
+<p>add-food works!</p>
+
+<div class="container">
+  <h2>Adicionar novo alimento</h2>
+
+  <form #addfoodform="ngForm" (ngSubmit)="addFoodFormSubmit()">
+    {{ food | json }}
+    <!-- <div class="form-group">
+      <label for="id">id:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="food.id"
+        name="id"
+      />
+    </div> -->
+    <div class="form-group">
+      <label for="nome">nome:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="food.nome"
+        name="nome"
+      />
+    </div>
+    <div class="form-group">
+      <label for="calorias">calorias:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="food.calorias"
+        name="calorias"
+      />
+    </div>
+    <div class="form-group">
+      <label for="proteina">proteina:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="food.proteina"
+        name="proteina"
+      />
+    </div>
+    <div class="form-group">
+      <label for="gordura">gordura:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="food.gordura"
+        name="gordura"
+      />
+    </div>
+    <div class="form-group">
+      <label for="carbo">carbo:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="food.carbo"
+        name="carbo"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fibra">fibra:</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="food.fibra"
+        name="fibra"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success">Adicionar</button>&nbsp;
+    <button type="button" class="btn btn-primary" (click)="goToList()">
+      Voltar para lista
+    </button>
+  </form>
+</div>

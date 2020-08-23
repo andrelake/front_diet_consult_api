@@ -1,0 +1,36 @@
+<p>food-list works!</p>
+<div>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Alimento(100g)</th>
+        <th scope="col">Calorias</th>
+        <th scope="col">Proteína</th>
+        <th scope="col">Gordura</th>
+        <th scope="col">Carbo</th>
+        <th scope="col">Fibra</th>
+        <th scope="col">*Ação*</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let food of _foodList">
+        <td id="idFontList">{{ food.id }}</td>
+        <td id="fontList">{{ food.nome }}</td>
+        <td id="fontList">{{ food.calorias }}</td>
+        <td id="fontList">{{ food.proteina }}</td>
+        <td id="fontList">{{ food.gordura }}</td>
+        <td id="fontList">{{ food.carbo }}</td>
+        <td id="fontList">{{ food.fibra }}</td>
+        <td>
+          <button type="button" class="btn btn-success">Editar</button>&nbsp;
+          <button type="button" class="btn btn-warning">Info</button>&nbsp;
+          <button type="button" class="btn btn-danger">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary" (click)="goToAddFood()">
+    Adicionar alimento
+  </button>
+</div>
